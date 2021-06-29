@@ -1,0 +1,51 @@
+@import '../../scss/global/Global';
+
+.search-tags {
+    .search {
+        display: block;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid $GREY-C;
+        font-size: 16px;
+    }
+}
+
+@mixin tablet-size {
+    flex: 0 0 calc(48% - 2px);
+}
+
+@mixin mobile-size {
+    flex: 0 0 100%;
+    margin: 0%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1%;
+    margin-right: -1%;
+    ul {
+        flex: 0 0 calc(23% - 2px);
+        margin: 1%;
+        @include respond-to(sm){
+            @include tablet-size;
+        }
+        @include respond-to(xs){
+            @include mobile-size;
+        }
+        @include respond-to(xxs){
+            @include mobile-size;
+        }
+    }
+    @include respond-to(xs){
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    @include respond-to(xxs){
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}

@@ -1,0 +1,19 @@
+@import '../../../scss/global/Global';
+
+li.item {
+    padding: 5px;
+    margin: 5px;
+    background: $GREY-A;
+    box-sizing: border-box;
+    cursor: pointer;
+    h4 {
+        padding: 0px;
+        margin: 0px;
+    }
+    &:not(.disable) {
+        &:hover,
+        &.active {
+            background: $LIGHT-BLLUE-A;
+        }
+    }
+}

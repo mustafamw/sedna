@@ -1,0 +1,53 @@
+@import '../../scss/global/Global';
+
+.add-tags {
+    display: flex;
+    flex-wrap: wrap;
+    > .items {
+        flex: 0 0 70%;
+        .loading {
+            display: block;
+            margin: auto;
+            width: 40px;
+        }
+        @include respond-to(xs){
+            flex: 0 0 100%;
+        }
+        @include respond-to(xxs){
+            flex: 0 0 100%;
+        }
+        > .items {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid $GREY-B;
+        }
+    }
+    > .selected-tags {
+        flex: 0 0 29%;
+        padding-left: 1%;
+        border-bottom: 1px solid $GREY-B;
+        @include respond-to(xs){
+            flex: 0 0 100%;
+            padding-left: 0%;
+        }
+        @include respond-to(xxs){
+            flex: 0 0 100%;
+            padding-left: 0%;
+        }
+    }
+    button {
+        display: block;
+        width: 100%;
+        border: none;
+        background: $BLLUE-A;
+        padding: 7px;
+        color: white;
+        cursor: pointer;
+        &:hover {
+            background: $BLLUE-B;
+        }
+        &:disabled {
+            background: $BLLUE-C;
+        }
+    }
+}
