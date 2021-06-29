@@ -1,10 +1,11 @@
-import { useSelector, useDispatch } from 'react-redux'
+import {useDispatch } from 'react-redux'
 import Items from '../items/Items';
 import React, { useState } from 'react';
 import './AddTags.scss'
 import SelectedTag from '../selectedTags/SelectedTags';
 import { addTags } from '../../store/actions/tags/tags'
 import loadingIcon from '../../assets/image/icon/loading.gif'
+import PropTypes from 'prop-types';
 
 function AddTags(props) {
     const { data, loading } = props;
@@ -54,6 +55,11 @@ function AddTags(props) {
             </div>
         </div>
     );
+}
+
+AddTags.propTypes = {
+    data: PropTypes.array,
+    loading: PropTypes.bool
 }
 
 export default AddTags;

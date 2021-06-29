@@ -1,6 +1,7 @@
 import Tag from './tag/Tag';
 import './Tags.scss';
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 function Tags(props) {
     const [search, searched] = useState('');
@@ -48,6 +49,12 @@ function Tags(props) {
             }
         </>
     );
+}
+
+Tags.propTypes = {
+    data: PropTypes.array,
+    removeTags: PropTypes.func,
+    searchTags: PropTypes.func
 }
 
 export default Tags;

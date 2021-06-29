@@ -1,4 +1,5 @@
 import Items from '../items/Items';
+import PropTypes from 'prop-types';
 
 function SelectedTag(props) {
     const { data, tags, itemSelected } = props;
@@ -14,6 +15,12 @@ function SelectedTag(props) {
                 itemSelected={itemSelected}/>
         </>
     )
+}
+
+SelectedTag.propTypes = {
+    data: PropTypes.array,
+    tags: PropTypes.array,
+    itemSelected: PropTypes.func
 }
 
 export default SelectedTag;

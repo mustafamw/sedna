@@ -1,5 +1,6 @@
 import Item from './item/item';
 import './Items.scss';
+import PropTypes from 'prop-types';
 
 function Items(props) {
     const { data, tags, itemSelected } = props;
@@ -18,6 +19,12 @@ function Items(props) {
             </ul>
         </>
     );
+}
+
+Items.propTypes = {
+    data: PropTypes.array,
+    tags: PropTypes.array,
+    itemSelected: PropTypes.func
 }
 
 export default Items;

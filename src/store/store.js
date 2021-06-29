@@ -18,7 +18,7 @@ export const store = createStore(reducers,
   )
 );
 
-store.subscribe((test) => {
+store.subscribe(() => {
   const { tags } = store.getState();
   if(tags.actionType !== SEARCH_TAG_LIST) {
     setItem(reduxStateKey, { tags })

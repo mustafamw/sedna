@@ -1,6 +1,7 @@
 import './Tag.scss';
 import moment from 'moment';
 import trash from '../../../assets/image/icon/trash.png'
+import PropTypes from 'prop-types';
 
 function Tag(props) {
     const { data, index, removeTags } = props;
@@ -21,6 +22,12 @@ function Tag(props) {
             {tag}
         </ul>
     );
+}
+
+Tag.propTypes = {
+    data: PropTypes.array,
+    index: PropTypes.number,
+    removeTags: PropTypes.func
 }
 
 export default Tag;

@@ -27,12 +27,11 @@ const tags = (state = initState, action) => {
                 actionType: REMOVE_TAG_LIST 
             }
         case SEARCH_TAG_LIST:
-            let list = state.orgData.filter((e) => {
-                return e.find((val) => val.name.toLowerCase().includes(data.toLowerCase()));
-            })
             return {
                 ...state,
-                data: list,
+                data: state.orgData.filter((e) => {
+                    return e.find((val) => val.name.toLowerCase().includes(data.toLowerCase()));
+                }),
                 actionType: SEARCH_TAG_LIST 
             }
         default:
