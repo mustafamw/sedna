@@ -8,21 +8,21 @@ import './Tags.scss';
 
 function TagsView() {
 
-  const movies = useSelector(state => state.movies)
-  const tags = useSelector(state => state.tags)
-  const dispatch = useDispatch()
+  const movies = useSelector(state => state.movies);
+  const tags = useSelector(state => state.tags);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMoviesList())
+    dispatch(getMoviesList());
   }, [dispatch]);
 
   const removeTag = (index) => {
-    dispatch(removeTags(index))
-  }
+    dispatch(removeTags(index));
+  };
 
   const searchTag = (value) => {
-    dispatch(searchTags(value))
-  }
+    dispatch(searchTags(value));
+  };
 
   return (
     <div className="tags-view">

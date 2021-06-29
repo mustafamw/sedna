@@ -1,33 +1,33 @@
-import {useDispatch } from 'react-redux'
+import {useDispatch } from 'react-redux';
 import Items from '../items/Items';
 import React, { useState } from 'react';
-import './AddTags.scss'
+import './AddTags.scss';
 import SelectedTag from '../selectedTags/SelectedTags';
-import { addTags } from '../../store/actions/tags/tags'
-import loadingIcon from '../../assets/image/icon/loading.gif'
+import { addTags } from '../../store/actions/tags/tags';
+import loadingIcon from '../../assets/image/icon/loading.gif';
 import PropTypes from 'prop-types';
 
 function AddTags(props) {
     const { data, loading } = props;
     const [tags, addOrRemoveTags] = useState([]);
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     
     const itemSelected = (data) => {
         const { active, id } = data;
         if(!active) {
             if(tags.length === 5) {
-                return
+                return;
             }
-            addOrRemoveTags(state => [...state, data])
+            addOrRemoveTags(state => [...state, data]);
         } else {
-            addOrRemoveTags(state => [...state.filter(e => e.id !== id)])
+            addOrRemoveTags(state => [...state.filter(e => e.id !== id)]);
         }
-    }
+    };
 
     const addTag = () => {
-        dispatch(addTags(tags))
-        addOrRemoveTags([])
-    }
+        dispatch(addTags(tags));
+        addOrRemoveTags([]);
+    };
 
     return (
         <div className="add-tags">
@@ -60,6 +60,6 @@ function AddTags(props) {
 AddTags.propTypes = {
     data: PropTypes.array,
     loading: PropTypes.bool
-}
+};
 
 export default AddTags;

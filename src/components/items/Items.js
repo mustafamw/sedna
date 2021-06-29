@@ -11,7 +11,7 @@ function Items(props) {
             active={ tags.find(n => n.id === e.id) ? true : false}
             disable={tags.length === 5}
             itemSelected={itemSelected} />
-    ))
+    ));
     return (
         <>
             <ul className="items">
@@ -25,6 +25,6 @@ Items.propTypes = {
     data: PropTypes.array,
     tags: PropTypes.array,
     itemSelected: PropTypes.func
-}
+};
 
 export default Items;

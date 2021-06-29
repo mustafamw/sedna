@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const httpRequest = async (method, endpoint) => {
     try {
@@ -10,4 +10,4 @@ export const httpRequest = async (method, endpoint) => {
         console.error(error);
         throw Error;
     }
-}
+};

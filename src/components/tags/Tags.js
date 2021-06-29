@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 function Tags(props) {
     const [search, searched] = useState('');
-    const { data, removeTags, searchTags } = props
+    const { data, removeTags, searchTags } = props;
 
     const tags = data.map((e, i) => (
         <Tag 
@@ -23,7 +23,7 @@ function Tags(props) {
             return;
         }
         searchTags(value);
-    }
+    };
 
     return (
         <>
@@ -55,6 +55,6 @@ Tags.propTypes = {
     data: PropTypes.array,
     removeTags: PropTypes.func,
     searchTags: PropTypes.func
-}
+};
 
 export default Tags;

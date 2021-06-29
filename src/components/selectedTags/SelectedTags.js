@@ -14,13 +14,13 @@ function SelectedTag(props) {
                 tags={tags}
                 itemSelected={itemSelected}/>
         </>
-    )
+    );
 }
 
 SelectedTag.propTypes = {
     data: PropTypes.array,
     tags: PropTypes.array,
     itemSelected: PropTypes.func
-}
+};
 
 export default SelectedTag;

@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route} from "react-router-dom";
-import TagsView from '../views/Tags'
+  Route} from 'react-router-dom';
+import TagsView from '../views/Tags';
 
 export default function App() {
   return (

@@ -1,6 +1,6 @@
 import './Tag.scss';
 import moment from 'moment';
-import trash from '../../../assets/image/icon/trash.png'
+import trash from '../../../assets/image/icon/trash.png';
 import PropTypes from 'prop-types';
 
 function Tag(props) {
@@ -16,7 +16,7 @@ function Tag(props) {
         <ul className="tag">
             <i 
                 className="icon"
-                onClick={ () => { removeTags(index) } }>
+                onClick={ () => { removeTags(index); } }>
                     <img srcSet={trash} className="trash-icon" alt="remove"/>
             </i>
             {tag}
@@ -28,6 +28,6 @@ Tag.propTypes = {
     data: PropTypes.array,
     index: PropTypes.number,
     removeTags: PropTypes.func
-}
+};
 
 export default Tag;

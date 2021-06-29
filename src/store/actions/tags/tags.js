@@ -2,15 +2,15 @@ import {
     ADD_TAG_LIST,
     REMOVE_TAG_LIST,
     SEARCH_TAG_LIST
-} from '../../actionTypes/actionTypes'
+} from '../../actionTypes/actionTypes';
 
 export function addTags(data) {
     return (dispatch) => {
         dispatch({
             type: ADD_TAG_LIST,
             data
-        })
-    }
+        });
+    };
 }
 
 export function removeTags(data) {
@@ -18,8 +18,8 @@ export function removeTags(data) {
         dispatch({
             type: REMOVE_TAG_LIST,
             data
-        })
-    }
+        });
+    };
 }
 
 export function searchTags(data) {
@@ -27,6 +27,6 @@ export function searchTags(data) {
         dispatch({
             type: SEARCH_TAG_LIST,
             data
-        })
-    }
+        });
+    };
 }
